@@ -4,5 +4,9 @@
 {% block maincontent %}
 <h3>Hello {{ name }} </h3>
 <hr>
-Welcome to my page
+<ul>
+{% for post in posts %}
+    <li>{{ post.title }} / {{ post.body }} / {{ post.pub_date }} <br></li>
+{% endfor %}
+</ul>
 {% endblock %}
